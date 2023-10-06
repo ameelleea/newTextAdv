@@ -8,14 +8,22 @@ public class Player{
     private int magAtk;
     private int magDef;
     private int speed;
-    private Equip equip[];
+    private int exp;
+    private Equip equip;
     private Area location;
-    private Item inventory[];
+    private Item inventory;
 
     Player(String name, String playerClass, Area location){
         this.name = name;
         this.playerClass = playerClass;
         this.location = location;
+        this.hp = 500;
+        this.level;
+        this.phyAtk;
+        this.phyDef;
+        this.magAtk;
+        this.magDef;
+        this.speed;
     }
 
     public void getStats(){
@@ -28,7 +36,6 @@ public class Player{
     public void setStats(){
         if (this.playerClass = "knight"){
             this.hp = 500;
-            this.stamina;
             this.level;
             this.phyAtk;
             this.phyDef;
@@ -37,7 +44,6 @@ public class Player{
         }
         else if (this.playerClass = "mage"){
             this.hp = 200;
-            this.stamina;
             this.level;
             this.phyAtk;
             this.phyDef;
@@ -46,12 +52,40 @@ public class Player{
         }
         else (this.playerClass = "stray"){
             this.hp = 100;
-            this.stamina;
             this.level;
             this.phyAtk;
             this.phyDef;
             this.magAtk;
             this.magDef;
+        }
+    }
+
+    public void levelUp(){
+        this.level += 1;
+
+        if (this.level <= 15){
+            this.hp = 500;
+            this.phyAtk;
+            this.phyDef;
+            this.magAtk;
+            this.magDef;
+            this.speed;
+        }
+        else if (this.level <= 25){
+            this.hp = 200;
+            this.phyAtk;
+            this.phyDef;
+            this.magAtk;
+            this.magDef;
+            this.speed;
+        }
+        else (this.level <= 35){
+            this.hp = 100;
+            this.phyAtk;
+            this.phyDef;
+            this.magAtk;
+            this.magDef;
+            this.speed;
         }
     }
 
