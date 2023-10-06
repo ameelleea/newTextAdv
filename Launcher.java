@@ -11,5 +11,7 @@ class Launcher{
         Player player = new Player();
         name = console.nextLine();
         char a = console.next.charAt(0);
+
+        Battle battle = new Battle(player, enemy);
     }
 }
