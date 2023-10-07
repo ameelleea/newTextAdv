@@ -9,7 +9,7 @@ public class Battle{
         this.enemy = enemy;
     }
 
-    public int startBattle(){
+    public void startBattle(){
         Scanner console = new Scanner(System.in);
 
         while (player.getHealth() != 0 && enemy.getHealth() != 0){
@@ -36,7 +36,17 @@ public class Battle{
             System.out.println("Avversario: " + enemy.getHealth());
         }
 
-        return player.getHealth();
+        if (player.getHealth() == 0){
+            player.hasDied();
+        }
+        else if (enemy.getHealth() == 0){
+            player.incrementExp(enemy.getExpBonus());
+
+            if (player.getExp() >= 100){
+                player.levelUp();
+            }
+        }
+        /* Implement expIncrement and death mechanics */
     }
 
     

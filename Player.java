@@ -8,16 +8,18 @@ public class Player{
     private int exp;
     private Area location;
     private Item inventory;
+    private boolean isDead;
 
     /* COSTRUTTORE */
     Player(String name, Area location){
         this.name = name;
         this.location = location;
         this.hp = 500;
-        this.level;
-        this.phyAtk;
-        this.phyDef;
-        this.speed;
+        this.level = 1;
+        this.phyAtk = 20;
+        this.phyDef = 20;
+        this.speed = 5;
+        this.isDead = false;
     }
 
     /* METODI GETTERS */
@@ -47,30 +49,19 @@ public class Player{
         return this.speed;
     }
 
+    public boolean isDead(){
+        return this.isDead;
+    }
+
     /* METODI SETTERS */
 
     public void levelUp(){
         this.level += 1;
-        this.exp = 0;
-
-        if (this.level <= 15){
-            this.hp = 500;
-            this.phyAtk;
-            this.phyDef;
-            this.speed;
-        }
-        else if (this.level <= 25){
-            this.hp = 200;
-            this.phyAtk;
-            this.phyDef;
-            this.speed;
-        }
-        else (this.level <= 35){
-            this.hp = 100;
-            this.phyAtk;
-            this.phyDef;
-            this.speed;
-        }
+        this.exp = this.exp - 100;
+        this.hp += 10;
+        this.phyAtk += 2;
+        this.phyDef += 1;
+        this.speed += 2;
     }
     
     public void incrementExp(int increment){
@@ -80,9 +71,13 @@ public class Player{
     public void setHealth(int currentHealth){
         this.hp = currentHealth;
     }
-    
+
     public void heal(int healingPoints){
         this.hp += healingPoints;
+    }
+
+    public void hasDied(){
+        this.isDead = true;
     }
 
     /* BATTLE SYSTEM */
