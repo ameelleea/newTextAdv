@@ -28,6 +28,9 @@ public class Area{
         }
     }
     
+    public String getName(){
+        return this.name;
+    }
     public boolean hasLoot(){
         boolean hasLoot;
         if (this.loot != null){
@@ -121,6 +124,6 @@ public class Area{
             neighbor = this.neighbors[3];
         }
         
-        return hasNeighbors;
+        return neighbor;
     }
 }

@@ -77,6 +77,10 @@ public class Player{
         this.exp += increment;
     }
 
+    public void setHealth(int currentHealth){
+        this.hp = currentHealth;
+    }
+    
     public void heal(int healingPoints){
         this.hp += healingPoints;
     }

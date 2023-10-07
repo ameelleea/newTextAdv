@@ -9,7 +9,7 @@ public class Battle{
         this.enemy = enemy;
     }
 
-    public void startBattle(){
+    public int startBattle(){
         Scanner console = new Scanner(System.in);
 
         while (player.getHealth() != 0 && enemy.getHealth() != 0){
@@ -35,6 +35,8 @@ public class Battle{
             System.out.println("Giocatore: " + player.getHealth());
             System.out.println("Avversario: " + enemy.getHealth());
         }
+
+        return player.getHealth();
     }
 
     
