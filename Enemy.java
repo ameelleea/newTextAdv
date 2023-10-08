@@ -1,10 +1,10 @@
 public class Enemy{
-    String name;
-    int hp;
-    int phyAtk;
-    int phyDef;
-    int speed;
-    int expBonus;
+    private String name;
+    private int hp;
+    private int phyAtk;
+    private int phyDef;
+    private int speed;
+    private int expBonus;
 
     /* COSTRUTTORE */
     Enemy(String name, int hp, int phyAtk, int phyDef, int speed, int expBonus){
