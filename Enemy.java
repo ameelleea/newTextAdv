@@ -39,6 +39,6 @@ public class Enemy{
     }
 
     public void takeDamage(int playerAtk){
-        this.hp -= (this.playerAtk - this.phyDef);
+        this.hp -= (playerAtk - this.phyDef);
     }
 }

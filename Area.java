@@ -5,16 +5,16 @@ public class Area{
     private Item unlockingKey;
     private Item loot;
     private Area[] neighbors;
-    private Enemy enemies;
+    private Enemy enemy;
 
     /* COSTRUTTORE */
-    Area(String name, boolean locked, Item unlockingKey, Item loot, Area[] neighbors, Enemy enemies){
+    Area(String name, boolean locked, Item unlockingKey, Item loot, Area[] neighbors, Enemy enemy){
         this.name = name;
         this.locked = locked;
         this.unlockingKey = unlockingKey;
         this.loot = loot;
         this.neighbors = neighbors;
-        this.enemies = enemies;
+        this.enemy = enemy;
     }
 
     /* METODI */
@@ -49,22 +49,23 @@ public class Area{
 
     public boolean hasEnemy(){
         boolean hasEnemy;
-        if (this.enemies != null){
+        if (this.enemy != null){
           hasEnemy = true;
         }
         else{
             hasEnemy = false;
         }
+        return hasEnemy;
     }
 
     public Enemy getEnemy(){
-        return enemy;
+        return this.enemy;
     }
 
     public boolean hasNeighbors(char direction){
-        boolean hasNeighbors;
+        boolean hasNeighbors = false;
 
-        if (direction == "n"){
+        if (direction == 'n'){
             if (this.neighbors[0] != null){
                 System.out.println("A nord c'è un'uscita.");
                 hasNeighbors = true;
@@ -74,7 +75,7 @@ public class Area{
                 hasNeighbors = false;
             }
         }
-        else if (direction == "s"){
+        else if (direction == 's'){
             if (this.neighbors[1] != null){
                 System.out.println("A sud c'è un'uscita.");
                 hasNeighbors = true;
@@ -84,7 +85,7 @@ public class Area{
                 hasNeighbors = false;
             }
         }
-        else if (direction == "w"){
+        else if (direction == 'w'){
             if (this.neighbors[2] != null){
                 System.out.println("A ovest c'è un'uscita.");
                 hasNeighbors = true;
@@ -94,7 +95,7 @@ public class Area{
                 hasNeighbors = false;
             }
         }
-        else if (direction == "e"){
+        else if (direction == 'e'){
             if (this.neighbors[3] != null){
                 System.out.println("A est c'è un'uscita.");
                 hasNeighbors = true;
@@ -109,18 +110,18 @@ public class Area{
     }
 
     public Area getNeighbor(char direction){
-        Area neighbor;
+        Area neighbor = null;
 
-        if (direction == "n"){
+        if (direction == 'n'){
             neighbor = this.neighbors[0];
         }
-        else if (direction == "s"){
+        else if (direction == 's'){
             neighbor = this.neighbors[1];
         }
-        else if (direction == "w"){
+        else if (direction == 'w'){
             neighbor = this.neighbors[2];
         }
-        else if (direction == "e"){
+        else if (direction == 'e'){
             neighbor = this.neighbors[3];
         }
         

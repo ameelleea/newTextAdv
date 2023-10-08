@@ -15,20 +15,20 @@ public class Battle{
         while (player.getHealth() != 0 && enemy.getHealth() != 0){
             char playerChoice;
 
-            Sytem.out.println("Cosa vuoi fare?")
+            System.out.println("Cosa vuoi fare?");
             System.out.println("A) Attaccare B) Curarti");
-            playerChoice = console.next.charAt(0);
+            playerChoice = console.next().charAt(0);
 
-            if (playerChoice == "A" || playerChoice == "a"){
+            if (playerChoice == 'A' || playerChoice == 'a'){
                 if (player.getSpeed() < enemy.getSpeed()){
                     player.takeDamage(enemy.enemyAttack());
                 }
                 else{
-                    enemy.takeDamage(player.playerAtk());
+                    enemy.takeDamage(player.playerAttack());
                 }
             }
-            else if (playerChoice == "B" || playerChoice == "b"){
-                player.heal(healingPoints);
+            else if (playerChoice == 'B' || playerChoice == 'b'){
+                player.heal(100);
             }
 
             System.out.println("Salute rimasta:");

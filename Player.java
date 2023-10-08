@@ -11,7 +11,7 @@ public class Player{
     private boolean isDead;
 
     /* COSTRUTTORE */
-    Player(String name, Area location){
+    public Player(String name, Area location){
         this.name = name;
         this.location = location;
         this.hp = 500;
@@ -96,16 +96,16 @@ public class Player{
     }
 
     public void pickUpLoot(Item loot){
-        for (int i = 0; i < inventory.length() & inventory[i] != null; i++){
+        /*for (int i = 0; i < inventory.length() & inventory[i] != null; i++){
             if (inventory[i] == null){
                 inventory[i] = loot;
             }
-        }
+        }*/
     }
 
     public void showInventory(){
-        for (int i = 0; i < inventory.length(); i++){
+       /* for (int i = 0; i < inventory.length(); i++){
             System.out.println(inventory[i]);
-        }
+        }*/
     }
 }
