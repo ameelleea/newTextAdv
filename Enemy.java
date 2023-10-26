@@ -35,7 +35,7 @@ public class Enemy{
 
     /* BATTLE SYSTEM */
     public int enemyAttack(){
-        return phyAtk;
+        return this.phyAtk;
     }
 
     public void takeDamage(int playerAtk){

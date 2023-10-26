@@ -11,12 +11,12 @@ public class Player{
     private boolean isDead;
 
     /* COSTRUTTORE */
-    public Player(String name, Area location){
+    Player(String name, Area location){
         this.name = name;
         this.location = location;
         this.hp = 500;
         this.level = 1;
-        this.phyAtk = 20;
+        this.phyAtk = 100;
         this.phyDef = 20;
         this.speed = 5;
         this.isDead = false;

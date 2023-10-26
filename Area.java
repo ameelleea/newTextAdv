@@ -127,4 +127,10 @@ public class Area{
         
         return neighbor;
     }
+
+    public void setNeighbor(Area[] neighbors){
+        for (int i = 0; i < neighbors.length; i++){
+            this.neighbors[i] = neighbors[i];
+        }   
+    }
 }

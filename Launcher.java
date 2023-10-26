@@ -11,10 +11,9 @@ public class Launcher{
           ItemList itemList = new ItemList();*/
 
         /* SETUP MAPPA */
-        Map map = new Map();
+        Map.setNeighbors();
         Area lastPos, currentPos;
-        lastPos = currentPos = map.undead_asylum;
-        map.setPosition(currentPos);
+        lastPos = currentPos = Map.undead_asylum;
         
         /* CREAZIONE PERSONAGGIO */
         System.out.println("CREAZIONE PERSONAGGIO");
@@ -33,9 +32,7 @@ public class Launcher{
         while (playing){
             System.out.println("POSIZIONE ATTUALE: " + currentPos.getName());
             
-            if (currentPos.hasEnemy()){
-                System.out.println("Incontri un nemico.");
-                
+            if (currentPos.hasEnemy()){                
                 Battle battle = new Battle(player, currentPos.getEnemy());
                 battle.startBattle();
             }
