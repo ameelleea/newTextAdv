@@ -1,14 +1,14 @@
 public class Area{
 
-    private String name;
+    private final String name;
     private boolean locked;
-    private Item unlockingKey;
+    private final Item unlockingKey;
     private Item loot;
     private Area[] neighbors;
     private Enemy enemy;
 
     /* COSTRUTTORE */
-    Area(String name, boolean locked, Item unlockingKey, Item loot, Area[] neighbors, Enemy enemy){
+    Area(String name, boolean locked, Item unlockingKey, Item loot, Enemy enemy){
         this.name = name;
         this.locked = locked;
         this.unlockingKey = unlockingKey;

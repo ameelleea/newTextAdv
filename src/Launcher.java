@@ -19,7 +19,7 @@ public class Launcher{
         System.out.println("CREAZIONE PERSONAGGIO");
         System.out.println("Scegli un nome per il personaggio: ");
         String name = console.nextLine();
-        Player player = new Player(name, currentPos);
+        Player player = new Player(name, 500, 50, 50, 25, currentPos);
         
         /* START GAME */
         boolean playing = true;
