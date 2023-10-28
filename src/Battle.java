@@ -24,13 +24,13 @@ public class Battle{
             if (playerChoice == 'A' || playerChoice == 'a'){
                 if (player.getSpeed() < enemy.getSpeed()){
                     System.out.println(enemy.getName() + " attacca per primo.");
-                    player.takeDamage(enemy.enemyAttack());
-                    enemy.takeDamage(player.playerAttack());
+                    player.takeDamage(enemy.attack());
+                    enemy.takeDamage(player.attack());
                 }
                 else{
                     System.out.println(player.getName() + " attacca per primo.");
-                    enemy.takeDamage(player.playerAttack());
-                    player.takeDamage(enemy.enemyAttack());
+                    enemy.takeDamage(player.attack());
+                    player.takeDamage(enemy.attack());
                 }
             }
             else if (playerChoice == 'B' || playerChoice == 'b'){

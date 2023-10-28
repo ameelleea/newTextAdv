@@ -17,6 +17,15 @@ public class Player extends Entity{
         return this.exp;
     }
 
+    public void printStats(){
+        System.out.println("NAME = " + super.getName());
+        System.out.println("LEVEL = " + this.level);
+        System.out.println("HP = " + super.getHealth());
+        System.out.println("ATK = " + super.attack());
+        System.out.println("DEF = " + super.getDef());
+        System.out.println("SPEED = " + super.getSpeed());
+    }
+
     /* METODI SETTERS */
 
     public void levelUp(){
@@ -30,7 +39,7 @@ public class Player extends Entity{
     }
 
     public void heal(int healingPoints){
-        this.hp += healingPoints;
+        super.setHealth(healingPoints);
     }
 
     public void movePlayer(Area location){

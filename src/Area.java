@@ -8,13 +8,14 @@ public class Area{
     private Enemy enemy;
 
     /* COSTRUTTORE */
-    Area(String name, boolean locked, Item unlockingKey, Item loot, Enemy enemy){
+    Area(String name, boolean locked, Item unlockingKey, int nNeighbors, Item loot, Enemy enemy){
         this.name = name;
         this.locked = locked;
         this.unlockingKey = unlockingKey;
         this.loot = loot;
         this.neighbors = neighbors;
         this.enemy = enemy;
+        this.neighbors = new Area[nNeighbors];
     }
 
     /* METODI */

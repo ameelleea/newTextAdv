@@ -17,15 +17,6 @@ public abstract class Entity {
     }
 
     /* METODI GETTERS */
-    /*public void printStats(){
-        System.out.println("NAME = " + this.name);
-        System.out.println("LEVEL = " + this.level);
-        System.out.println("HP = " + this.hp);
-        System.out.println("ATK = " + this.phyAtk);
-        System.out.println("DEF = " + this.phyDef);
-        System.out.println("SPEED = " + this.speed);
-    }*/
-
     public int getHealth(){
         return this.hp;
     }
@@ -36,6 +27,10 @@ public abstract class Entity {
 
     public int getSpeed(){
         return this.speed;
+    }
+
+    public int getDef(){
+        return this.phyDef;
     }
 
     public boolean hasDied(){
