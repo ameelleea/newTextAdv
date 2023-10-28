@@ -1,21 +1,17 @@
 import java.util.Scanner;
 
 public class Battle{
-    private Player player;
-    private Enemy enemy;
-
-    Battle(Player player, Enemy enemy){
-        this.player = player;
-        this.enemy = enemy;
-    }
     
     /* Todo: implement coherent atk and def stats and add more messages to user */
-    public void startBattle(){
+    public static void startBattle(Player player, Enemy enemy){
         Scanner console = new Scanner(System.in);
         System.out.println("Hai incontrato " + enemy.getName());
         System.out.println("INIZIO BATTAGLIA");
         while (player.getHealth() > 0 && enemy.getHealth() > 0){
             char playerChoice;
+
+
+            System.out.println("Attacco player: " + player.attack() + "\nAttacco nemico: " + enemy.attack());
 
             System.out.println("Cosa vuoi fare?");
             System.out.println("A) Attaccare B) Curarti");

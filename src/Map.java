@@ -1,6 +1,6 @@
 public class Map{
     /* Istanziare tutte le aree da usare poi nel main */
-    private static Enemy enemy = new Enemy("undead", 50, 50, 50, 50, 50);
+    private static Enemy enemy = new Enemy("Undead", 50, 50, 5, 50, 50);
     public static Item loot, key;
     public static Area[] UndeadAsylumNeighbors = new Area[1];
     public static Area[] FirelinkShrineNeighbors = new Area[2];

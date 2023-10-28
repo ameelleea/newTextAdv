@@ -19,7 +19,7 @@ public class Launcher{
         System.out.println("CREAZIONE PERSONAGGIO");
         System.out.println("Scegli un nome per il personaggio: ");
         String name = console.nextLine();
-        Player player = new Player(name, 500, 50, 50, 25, currentPos);
+        Player player = new Player(name, 500, 50, 5, 25, currentPos);
         
         /* START GAME */
         boolean playing = true;
@@ -27,14 +27,14 @@ public class Launcher{
         char menuChoice;
         Item loot;
         Area nextLocation;
-        boolean inArea = true;
+        boolean inArea;
 
         while (playing){
+            inArea = true;
             System.out.println("POSIZIONE ATTUALE: " + currentPos.getName());
             
             if (currentPos.hasEnemy()){                
-                Battle battle = new Battle(player, currentPos.getEnemy());
-                battle.startBattle();
+                Battle.startBattle(player, currentPos.getEnemy());
             }
 
             if (currentPos.hasLoot()){
